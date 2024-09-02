@@ -1,0 +1,134 @@
+/* Root Variables */
+:root {
+    --primary-color: #00718d; /* Teal shade for school color */
+    --secondary-color: #FFFFFF; /* White */
+    --accent-color: #F5A623; /* Orange */
+    --text-color: #333333; /* Dark gray */
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --border-radius: 8px;
+    --box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* General Body Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family);
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: row;
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+}
+
+/* Sidebar Styles */
+#clusters {
+    width: 300px; /* Fixed width for the sidebar */
+    padding: 20px;
+    background-color: var(--secondary-color);
+    overflow-y: auto; /* Allows scrolling for many items */
+    box-shadow: var(--box-shadow);
+    position: fixed; /* Fixed position */
+    left: 0; /* Align to the left side of the viewport */
+    top: 80px; /* Align to the bottom of the header */
+    bottom: 0; /* Align to the bottom of the viewport */
+    z-index: 1; /* Ensures it does not overlap with the header */
+}
+
+/* Header Styles */
+#header {
+    position: fixed; /* Ensures the header does not move */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left, with the sidebar */
+    width: 100%; /* Full width of the viewport */
+    height: 60px; /* Ensure this is enough to contain the images */
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-around; /* This will distribute space evenly */
+    padding: 10px 20px; /* Sufficient padding on all sides */
+    box-shadow: var(--box-shadow);
+    z-index: 2; /* Keeps the header above other content */
+}
+
+/* Header Styles */
+#embed {
+    position: fixed; /* Ensures it does not move */
+    top: 80px; /* Align vertically */
+    bottom: 0;
+    left: 340px; /* Align horizontally */
+    right: 0;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    z-index: 0; /* Keeps below other content */
+}
+
+#header img {
+    height: 60px; /* Adjust size as needed */
+    width: auto;
+    margin: 0 10px; /* Adequate margin to prevent overflow */
+}
+
+#headerIcon {
+    display: flex;
+    align-items: center;
+}
+
+/* Category Styles */
+.category {
+    background-color: var(--secondary-color);
+    border: 1px solid #ccc;
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
+    margin-top: 10px; /* Adds space above the box */
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.category-title {
+    font-size: 18px;
+    margin: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+/* Category Icon Styles */
+.category-icon {
+    width: 50px;
+    height: 50px;
+}
+
+/* List Styles */
+.category-list {
+    list-style-type: none;
+    padding: 0;
+    display: none; /* Initially hidden */
+}
+
+.category-list li {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+/* Input Checkbox Styles */
+.delete-checkbox {
+    margin-right: 10px;
+}
+
+/* Button Styles */
+button {
+    background-color: var(--accent-color);
+    color: var(--secondary-color);
+    border: none;
+    padding: 10px 20px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    box-shadow: var(--box-shadow);
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: darken(var(--accent-color), 10%);
+}
